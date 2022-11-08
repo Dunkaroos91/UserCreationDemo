@@ -9,7 +9,7 @@ export const Container = styled.div`
     top: 0;
     z-index: 0;
     overflow: hidden;
-    background: grey;
+    background: #070b18;
 `
 
 export const FormWrap = styled.div`
@@ -34,7 +34,7 @@ export const FormContent = styled.div`
 `
 
 export const Form = styled.form`
-    background: black;
+    background: #0b2027;
     max-width: 400px;
     height: auto;
     width: 100%;
@@ -73,7 +73,7 @@ export const FormInput = styled.input`
 `
 
 export const FormButton = styled.button`
-    background: mediumblue;
+    background: #29418e;
     padding: 16px 0;
     margin-top: 24px;
     border: none;
@@ -84,7 +84,7 @@ export const FormButton = styled.button`
 
     &:hover {
         transition: all 0.2s ease-in-out;
-        background: ${({primary}) => (primary ? '#fff' : 'blue')};
+        background: ${({primary}) => (primary ? '#fff' : '#070b18')};
     }
 `
 

@@ -74,7 +74,7 @@ return (
                               {states.map((state) => <option key={state.abbreviation} value={state.name}>{state.name}</option>)}
                             </select>
                             <SelectWrap />
-                            <FormLabel htmlFor='for'>Occupation</FormLabel>
+                            <FormLabel>Occupation</FormLabel>
                             <select value={occupation} required onChange={(event)=>{setUserOccupation(event.target.value)}}>
                               <option disabled value="">Select an Occupation</option>
                               {occupations.map((occupation, index) => <option key={index} value={occupation}>{occupation}</option>)}
