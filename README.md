@@ -1,3 +1,9 @@
-#UserCreationDemo
+# UserCreationDemo
 
-Run NPM start
+```
+npm i
+```
+
+```
+npm start
+```
