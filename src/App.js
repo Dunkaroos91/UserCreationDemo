@@ -29,7 +29,8 @@ useEffect(() => {
   });
 }, []);
 
-const handleSubmit = () => {
+const handleSubmit = (e) => {
+  e.preventDefault();
   Axios.post("https://frontend-take-home.fetchrewards.com/form", 
   {
       name,
@@ -40,7 +41,14 @@ const handleSubmit = () => {
   })
   .then(function (response) {
     console.log(response);
-    alert('Success')
+    alert('Success');
+    setName('');
+    setEmail('');
+    setPassword('');
+    setUserState('');
+    setUserOccupation('');
+    
+    
   })
   .catch(function (error) {
     console.log(error);
