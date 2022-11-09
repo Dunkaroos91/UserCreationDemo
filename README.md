@@ -5,14 +5,6 @@ npm i
 ```
 
 ```
-npm install axios
-```
-
-```
-npm install --save styled-components
-```
-
-```
 npm start
 ```
 
