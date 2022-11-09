@@ -1,4 +1,13 @@
 import styled from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
+
+
+export default createGlobalStyle`
+* {
+    @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&family=Outfit&family=Roboto:wght@300&display=swap');
+}
+`    
+
 
 export const Container = styled.div`
     min-height: 692px;
@@ -9,7 +18,7 @@ export const Container = styled.div`
     top: 0;
     z-index: 0;
     overflow: hidden;
-    background: #070b18;
+    background: #DAE6FF;
 `
 
 export const FormWrap = styled.div`
@@ -34,7 +43,7 @@ export const FormContent = styled.div`
 `
 
 export const Form = styled.form`
-    background: #0b2027;
+    background: #ffff;
     max-width: 400px;
     height: auto;
     width: 100%;
@@ -43,7 +52,7 @@ export const Form = styled.form`
     margin: 0 auto;
     padding: 60px 32px;
     border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 
     @media screen and (max-width: 400px) {
         padding: 32px 32px;
@@ -52,9 +61,9 @@ export const Form = styled.form`
 
 export const FormH1 = styled.h1`
     margin-bottom: 30px;
-    color: #fff;
+    color: #29418e;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 600;
     text-align: center;
 `
 
@@ -62,11 +71,12 @@ export const FormLabel = styled.label`
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 14px;
-    color: #fff;
+    color: #29418e;
 `
 
 export const FormInput = styled.input`
     padding: 16px 16px;
+    background: #DAE6FF;
     margin-bottom: 32px;
     border: none;
     border-radius: 4px;
@@ -84,7 +94,7 @@ export const FormButton = styled.button`
 
     &:hover {
         transition: all 0.2s ease-in-out;
-        background: ${({primary}) => (primary ? '#fff' : '#070b18')};
+        background: ${({primary}) => (primary ? '#fff' : '#10308e')};
     }
 `
 
@@ -98,3 +108,22 @@ export const Text = styled.span`
 export const SelectWrap = styled.div`
     margin-top: 15px;
 `
+export const Select = styled.select`
+  width: 100%;
+  height: 35px;
+  background: white;
+  color: gray;
+  padding-left: 0px;
+  font-size: 14px;
+  border: none;
+  margin-left: 10px 10px;
+
+  option {
+    color: black;
+    background: #DAE6FF;
+    display: flex;
+    white-space: pre;
+    min-height: 20px;
+    padding: 0px 2px 1px;
+  }
+`;

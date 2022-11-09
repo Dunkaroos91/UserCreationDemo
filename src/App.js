@@ -7,7 +7,7 @@ import {
   FormH1,
   FormLabel,
   FormInput,
-  FormButton, SelectWrap,
+  FormButton, SelectWrap, Select,
 } from './AppStyled'
 import Axios from "axios";
 import { useState } from "react";
@@ -63,22 +63,22 @@ return (
                         <Form onSubmit={handleSubmit}>
                             <FormH1>User Creation</FormH1>
                             <FormLabel>Full Name</FormLabel>
-                            <FormInput required value={name} onChange={(event)=>{setName(event.target.value)}}/>
+                            <FormInput required placeholder="Enter your full name" value={name} onChange={(event)=>{setName(event.target.value)}}/>
                             <FormLabel>Email</FormLabel>
-                            <FormInput type='email' required value={email} onChange={(event)=>{setEmail(event.target.value)}}/>
+                            <FormInput type='email' required placeholder="Enter your email address" value={email} onChange={(event)=>{setEmail(event.target.value)}}/>
                             <FormLabel>Password</FormLabel>
-                            <FormInput type='password' required value={password} onChange={(event)=>{setPassword(event.target.value)}} />
+                            <FormInput type='password' required placeholder="Enter your password" value={password} onChange={(event)=>{setPassword(event.target.value)}} />
                             <FormLabel>State</FormLabel>
-                            <select value={state} required onChange={(event)=>{setUserState(event.target.value)}}>
+                            <Select value={state} required onChange={(event)=>{setUserState(event.target.value)}}>
                               <option disabled value="">Select a State</option>
                               {states.map((state) => <option key={state.abbreviation} value={state.name}>{state.name}</option>)}
-                            </select>
+                            </Select>
                             <SelectWrap />
                             <FormLabel>Occupation</FormLabel>
-                            <select value={occupation} required onChange={(event)=>{setUserOccupation(event.target.value)}}>
+                            <Select value={occupation} required onChange={(event)=>{setUserOccupation(event.target.value)}}>
                               <option disabled value="">Select an Occupation</option>
                               {occupations.map((occupation, index) => <option key={index} value={occupation}>{occupation}</option>)}
-                            </select>
+                            </Select>
                             <SelectWrap />
                             <FormButton type='submit'>Submit</FormButton>
                         </Form>
